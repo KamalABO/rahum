@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento");
+body, .contant {
+  background: url("ramha.jpg") 0 / cover fixed;
+  /* background-color: #212121; */
+  font-family: "Sacramento", cursive;
+}
+.contant {
+  /* background: url("rahma.jpg") 0 / cover fixed; */
+  height: 100%;
+  width: 100%;
+  /* position: relative; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.contant .title {
+  font-size: 5rem;
+  /* position: absolute; */
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  text-shadow: 0px 2px 1px orange, 0px 0px 6px orangered,
+    0px 5px 10px rgba(0, 0, 0, 1);
+}
+.title{
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  /* font-size: 7em; */
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.fire {
+  left: 10%;
+  position: absolute;
+  bottom: 0%;
+  list-style: none;
+  padding: 0;
+  top: 85%;
+}
+.fire li {
+  display: inline-block;
+  margin: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 500px;
+  position: relative;
+  background-color: #8d6e63;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.fire li::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #212121;
+  border-radius: 500px;
+  top: -40%;
+  left: -30%;
+}
+.fire li::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: #212121;
+  width: 100%;
+  border-radius: 500px;
+  top: -40%;
+  right: -30%;
+}
+.fire li span {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  transform: rotate(45deg);
+  animation: fire 0.3s ease infinite;
+}
+.fire li:nth-child(1)span {
+  animation-delay: 0.5s;
+}
+.fire li:nth-child(2)span {
+  animation-delay: 1s;
+}
+.fire li:nth-child(3)span {
+  animation-delay: 1.5s;
+}
+.fire li:nth-child(4)span {
+  animation-delay: 2s;
+}
+.fire li:nth-child(5)span {
+  animation-delay: 2.5s;
+}
+.fire li:nth-child(6)span {
+  animation-delay: 3s;
+}
+@keyframes fire {
+  0%,
+  100% {
+    transform: rotate(55deg);
+    width: 20px;
+    background: linear-gradient(90deg, orangered, orange);
+  }
+  50% {
+    transform: rotate(35deg);
+    width: 18px;
+    background: linear-gradient(90deg, orangered, orange);
+  }
+}
+@media (max-width: 775px){
+  .title{
+    text-align: center;
+    top: 35%;
+  }
+}
